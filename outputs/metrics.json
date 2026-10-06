@@ -1,0 +1,98 @@
+{
+  "rolling_cv_mean": {
+    "Naive $/mile baseline": {
+      "MAE": 220.7,
+      "RMSE": 667.84,
+      "MAPE": 10.46,
+      "MedAPE": 6.87,
+      "MAPE_clean": 8.33,
+      "MAE_clean": 168.22
+    },
+    "LightGBM only": {
+      "MAE": 121.32,
+      "RMSE": 639.02,
+      "MAPE": 5.08,
+      "MedAPE": 2.57,
+      "MAPE_clean": 2.87,
+      "MAE_clean": 67.48
+    },
+    "Ridge (no trend)": {
+      "MAE": 128.65,
+      "RMSE": 642.16,
+      "MAPE": 5.28,
+      "MedAPE": 2.81,
+      "MAPE_clean": 3.07,
+      "MAE_clean": 74.83
+    },
+    "Ridge + trend": {
+      "MAE": 109.89,
+      "RMSE": 634.79,
+      "MAPE": 4.55,
+      "MedAPE": 1.94,
+      "MAPE_clean": 2.27,
+      "MAE_clean": 55.87
+    },
+    "Ridge + trend + LightGBM (final)": {
+      "MAE": 99.47,
+      "RMSE": 631.93,
+      "MAPE": 4.13,
+      "MedAPE": 1.53,
+      "MAPE_clean": 1.85,
+      "MAE_clean": 45.37
+    }
+  },
+  "holdout_sep_oct": {
+    "Naive $/mile baseline": {
+      "MAE": 229.1,
+      "RMSE": 670.66,
+      "MAPE": 10.49,
+      "MedAPE": 6.8,
+      "MAPE_clean": 8.09
+    },
+    "LightGBM only": {
+      "MAE": 148.31,
+      "RMSE": 644.64,
+      "MAPE": 6.31,
+      "MedAPE": 3.82,
+      "MAPE_clean": 3.9
+    },
+    "Ridge (no trend)": {
+      "MAE": 157.52,
+      "RMSE": 649.2,
+      "MAPE": 6.51,
+      "MedAPE": 4.03,
+      "MAPE_clean": 4.11
+    },
+    "Ridge + trend": {
+      "MAE": 113.66,
+      "RMSE": 636.09,
+      "MAPE": 4.82,
+      "MedAPE": 2.02,
+      "MAPE_clean": 2.32
+    },
+    "Ridge + trend + LightGBM (final)": {
+      "MAE": 105.55,
+      "RMSE": 633.66,
+      "MAPE": 4.49,
+      "MedAPE": 1.75,
+      "MAPE_clean": 1.99
+    }
+  },
+  "unseen_city_stress": {
+    "Final model": {
+      "MAE": 109.67,
+      "MAPE": 4.72,
+      "MedAPE": 1.83,
+      "MAPE_clean": 2.07
+    },
+    "Ridge + trend": {
+      "MAE": 118.29,
+      "MAPE": 5.05,
+      "MedAPE": 2.09,
+      "MAPE_clean": 2.39
+    }
+  },
+  "rows_dropped_as_corrupt": 677,
+  "n_train": 48000,
+  "n_val": 12000
+}

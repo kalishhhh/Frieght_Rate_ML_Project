@@ -1,0 +1,35 @@
+train/test rows: 48,000   validation rows: 12,000
+
+Rolling-origin CV (mean of 5 folds, 2-month test windows):
+                                      MAE    RMSE  ...  MAPE_clean  MAE_clean
+model                                             ...                       
+Naive $/mile baseline             220.70  667.84  ...        8.33     168.22
+LightGBM only                     121.32  639.02  ...        2.87      67.48
+Ridge (no trend)                  128.65  642.16  ...        3.07      74.83
+Ridge + trend                     109.89  634.79  ...        2.27      55.87
+Ridge + trend + LightGBM (final)   99.47  631.93  ...        1.85      45.37
+
+[5 rows x 6 columns]
+
+Primary hold-out (train Jan-Aug -> test Sep-Oct):
+                                      MAE    RMSE   MAPE  MedAPE  MAPE_clean
+model                                                                      
+Naive $/mile baseline             229.10  670.66  10.49    6.80        8.09
+LightGBM only                     148.31  644.64   6.31    3.82        3.90
+Ridge (no trend)                  157.52  649.20   6.51    4.03        4.11
+Ridge + trend                     113.66  636.09   4.82    2.02        2.32
+Ridge + trend + LightGBM (final)  105.55  633.66   4.49    1.75        1.99
+
+Unseen-city stress test (8 cities hidden from training, 5 random draws):
+                   MAE  MAPE  MedAPE  MAPE_clean
+model                                          
+Final model    109.67  4.72    1.83        2.07
+Ridge + trend  118.29  5.05    2.09        2.39
+
+Final fit on 48,000 rows; dropped 677 corrupted-label rows (1.41%)
+
+December predictions: min 822.74  mean 831.28  max 841.58
+Sanity - same lane/equipment in training (Sep-Oct, clean): mean $820 (n=4)
+median $/mile  train(clean labels): 2.145   validation predictions: 2.166
+
+Done.

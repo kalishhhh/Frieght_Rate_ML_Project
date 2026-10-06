@@ -1,0 +1,3 @@
+model,MAE,MAPE,MedAPE,MAPE_clean
+Final model,109.67,4.72,1.83,2.07
+Ridge + trend,118.29,5.05,2.09,2.39

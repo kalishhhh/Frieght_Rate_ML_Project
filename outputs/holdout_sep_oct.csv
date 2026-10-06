@@ -1,0 +1,6 @@
+model,MAE,RMSE,MAPE,MedAPE,MAPE_clean
+Naive $/mile baseline,229.1,670.66,10.49,6.8,8.09
+LightGBM only,148.31,644.64,6.31,3.82,3.9
+Ridge (no trend),157.52,649.2,6.51,4.03,4.11
+Ridge + trend,113.66,636.09,4.82,2.02,2.32
+Ridge + trend + LightGBM (final),105.55,633.66,4.49,1.75,1.99
